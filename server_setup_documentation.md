@@ -91,6 +91,28 @@ cd /etc/apache2/mods-enabled/
 sudo cp dir.conf dir.conf.bak
 sudo nano dir.conf
 ```
+Move `index.php` to the front of the various index options; that way, Apache will default to your
+PHP page instead of the HTML page. Exit the config file and check its syntax using
+`apachectl configtest`. If you receive "Syntax OK," then all is well. At that point, reload Apache
+and verify its status:
+
+```
+sudo systemctl reload apache2
+sudo systemctl restart apache2
+systemctl status apache2
+```
+
+You are now free to create an `index.php` page using PHP scripts. Navigate to `/var/www/html` and 
+create a page in your text editor:
+
+```
+cd /var/www/html/
+sudo nano index.php
+```
+
+This will become your default page for you LAMP stack/Apache server, the first thing viewed at its 
+IP. You can thus verify the page is working by navigating to `externalIP/index.php` on a browser
+or by checking it in `w3m` with `w3m http://localhost/index.php`. 
 
 ## Installing MySQL
 
