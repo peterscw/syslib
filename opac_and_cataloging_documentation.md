@@ -1,7 +1,7 @@
-#Basic OPAC and Cataloging Module
-##Documentation Portfolio
+# Basic OPAC and Cataloging Module
+## Documentation Portfolio
 
-**Introduction**
+## Introduction
 Every library must provide information about its collection to its patrons. Generally, the primary point of access to a 
 library's holdings is the **O**nline **P**ublic **A**ccess **C**atalog (OPAC). The OPAC contains bibliographic information
 about items in the library which will assist patrons in locating desired resources; this information includes metadata such
@@ -13,7 +13,7 @@ of a much wider system composed of websites and relational databases. The databa
 storing the information about the library's items, and the websites share those records and make them searchable to the
 public (hence "online public access catalog").
 
-**Relational Database Structure**
+## Relational Database Structure
 Relational databases, such as those created by `MySQL`, store information in datatables. These tables can then be searched 
 in a number of ways to recall the desired records. Relational databases in particular allow users to search and recall
 information stored in multiple datatables simultaneously, yielding composite/related search results. For the bibilographic 
@@ -25,8 +25,8 @@ When a usesr conducts a search in an OPAC, the search fields correspond to field
 field IDs operate as search parameters to guide the search to the proper columns/rows in the table. The search engine 
 results page (SERP) then displays the records which match the search parameters.
 
-**Step-by-Step Setup**
-*Connecting to the Database*
+## Step-by-Step Setup
+### Connecting to the Database
 A LAMP stack can use `Apache 2`, `MySQL`, and `PHP` to create a barebones OPAC. First, a database of books/items must be
 created in `MySQL`. After this, a webpage for the OPAC will be created using `HTML` and stored on an `Apache 2` server.
 Finally, a `PHP` script can be inserted into/reference by the `HTML` OPAC search page to provide a connection to the
@@ -79,7 +79,7 @@ being the four-digit years of your range.
 
 One you've added any other `HTML` or `CSS` to your page, you're (almost) ready to go!
 
-*OPAC: Search and Retrieval*
+### OPAC: Search and Retrieval
 The barebones OPAC created will allow searching by keyword/terms and date range (other criteria can be added on the OPAC page
 created earlier by adding `input` fields in the `form` under "My Basic Library OPAC"). When search terms are entered (date
 range is required in our OPAC), the `PHP` search script connects to the OPAC database in `MySQL` and scans the datatables in
@@ -91,7 +91,7 @@ information retrieved in the order listed. If corresponding information cannot b
 In short: terms entered onto the `HTML` search engine will run through a `PHP` script to match them with information stored
 in the tables of the `MySQL` database and display those records in the SERP. Simple! 
 
-*Scaling Up: Making this a Real-World OPAC/Cataloging Module*
+### Scaling Up: Making this a Real-World OPAC/Cataloging Module
 Were this to become a real-world OPAC/cataloging module, many more fields would have to be present in the database and 
 available for search in the `HTML`/`PHP` pages for the OPAC. MARC21 records are complex, and each and every type of metadata
 listed in them would have be input into a table/database and made accessible in the code for the OPAC. The cataloging 
@@ -100,7 +100,7 @@ also help to use a bit of `CSS` to make the OPAC visually pleasing as well. In s
 cataloging module follows this basic blueprint, but it is scaled up in every conceivable way, from the table design to the
 search parameters in the code itself.
 
-*Additional Configuration Considerations*
+### Additional Configuration Considerations
 The `MySQL` database should be properly configured before beginning work on the OPAC and cataloging module (see previous 
 documentation).
 
@@ -138,7 +138,7 @@ sudo chmod -R g+s /var/www/html
 ```
 Any new files will thus inherit the proper authorizations and permissions. 
 
-**Key Details**
+## Key Details
 Other than the various permissions established in the configuration changes above, a few key details remain. The first is
 to be careful with data types. As noted previously, not all fields to be searched are text; copyright year is a number. All
 code dealing with years must therefore be treated as numbers and given acceptable ranges. This is true for the database/table
@@ -150,7 +150,7 @@ A second key detail is simple: after adding a record or conducting a search, the
 return to the search page/data entry page. Do not forget to add a simple `a href=` link in your `HTML` files at the end.
 Your users will thank you.
 
-**Using Documentation**
+## Using Documentation
 No problems arose in using the documentation provided for this assignment. The lectures complemented the textbook well,
 and I was able to follow along and get things put together without issue (other than my usual typos). I did go "off book"
 to play around with relational databases a bit to make sure I understood the connections between the tables, and that 
