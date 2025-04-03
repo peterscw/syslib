@@ -44,7 +44,7 @@ $conn = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 Other `PHP` added to your OPAC (a `searh.php` file linked as a form to your `HTML` OPAC page) will define search parameters 
 for the database fields you wish to make searchable and display results. 
 
-*Structure of the Cataloging Module*
+### Structure of the Cataloging Module
 Like the OPAC itself, the cataloging module will need to consist of a webpage and a `PHP` script to link your page to
 the database itself. The search page can be created however you wish, but it *must* contain the following to link to your 
 database-accessing `PHP` script, here named `insert.php`:
