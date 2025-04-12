@@ -38,9 +38,9 @@ apt update
 echo 'deb [signed-by=/etc/apt/keyrings/koha.asc] https://debian.koha-community.org/koha stable main' |
  sudo tee /etc/apt/sources.list.d/koha.list
 ```
-(I had to find these in the [Koha documentation] (https://wiki.koha-community.org/wiki/Koha_on_Debian#Installing_the_operating_system)
+I had to find these in the [Koha documentation](https://wiki.koha-community.org/wiki/Koha_on_Debian#Installing_the_operating_system)
 ; the shorter set of commands in the book kept throwing error messages stating it was unable to connect 
-to the repo/repo was not valid.)
+to the repo/repo was not valid.
 
 Next, install the GPG key:
 ```
