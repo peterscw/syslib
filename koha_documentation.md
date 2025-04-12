@@ -38,8 +38,9 @@ apt update
 echo 'deb [signed-by=/etc/apt/keyrings/koha.asc] https://debian.koha-community.org/koha stable main' |
  sudo tee /etc/apt/sources.list.d/koha.list
 ```
-(I had to find these in the Koha documentation; the shorter set of commands in the book kept throwing
-error messages stating it was unable to connect to the repo/repo was not valid.)
+(I had to find these in the [Koha documentation] (https://wiki.koha-community.org/wiki/Koha_on_Debian#Installing_the_operating_system)
+; the shorter set of commands in the book kept throwing error messages stating it was unable to connect 
+to the repo/repo was not valid.)
 
 Next, install the GPG key:
 ```
@@ -97,7 +98,6 @@ systemctl restart apache2
 ```
 
 And voila! Your CLI run is almost complete!
-
 
 ## Web Configuration of Koha
 Before switching to the online GUI, you need to grab a password using the CLI. If you're still root,
